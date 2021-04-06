@@ -12,6 +12,7 @@ Things you need to get the project up and running on a local machine:
 
 * Java 11
 * Maven latest
+* Docker Latest version
 
 ### Installing
 
@@ -22,14 +23,27 @@ Follow the below steps to build the application:
 
 mvn clean install
 
+or/and
+
+* Build the docker image of the application by executing below command:
+  ```
+  docker build -f Dockerfile -t warehouse-inventory-service .
+  ```
 
 ### Running the application
 
 * Running the jar from command line (if using maven to build the jar file)
-
-java -jar -Dspring.profiles.active=default target/warehouse-inventory-service-0.0.1-SNAPSHOT.jar
-or
-mvn spring-boot:run
+  ```
+  java -jar -Dspring.profiles.active=default target/warehouse-inventory-service-0.0.1-SNAPSHOT.jar
+  ```
+  or
+  ```
+  mvn spring-boot:run
+  ```
+  or
+  ```
+  docker run -p 8080:8080 warehouse-inventory-service
+  ```
 
 
 #### Swagger Endpoint
@@ -45,10 +59,11 @@ mvn spring-boot:run
 * Can be accessed on: http://localhost:8080/actuator
 
 #### H2-Console
-* Can be accessed on: http://localhost:8080/h2-console with below details: 
+* Can be accessed on: http://localhost:8080/h2-console with below details:
+  ```
   * JDBC URL:  jdbc:h2:mem:testdb
   * User Name: sa
   * Password: (no password required)
-
+  ```
 #### Postman Testing
 * Sample package included for testing: IKEA_Warehouse_Inventory_Service.postman_collection

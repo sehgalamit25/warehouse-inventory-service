@@ -12,7 +12,7 @@
     <artifactId>warehouse-inventory-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>warehouse-inventory-service</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Warehouse Inventory Service</description>
     <properties>
         <java.version>11</java.version>
     </properties>
