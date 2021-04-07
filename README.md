@@ -19,13 +19,12 @@ Things you need to get the project up and running on a local machine:
 Follow the below steps to build the application:
 
 
-* Build the jar file using maven
-
-mvn clean install
-
-or/and
-
-* Build the docker image of the application by executing below command:
+Step 1. Build the jar file using maven
+  ```
+    mvn clean install
+  ```
+  
+Step 2. Build the docker image of the application by executing below command:
   ```
   docker build -f Dockerfile -t warehouse-inventory-service .
   ```
